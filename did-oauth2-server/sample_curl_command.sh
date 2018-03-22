@@ -1,0 +1,1 @@
+curl -X POST -v -H "Host: localhost:3000" -H "Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW" -H "Content-Type: application/x-www-form-urlencoded" -d "client_id=mobile_android&client_secret=secret&grant_type=password&username=demo&password=1234" http://localhost:3000/oauth/token

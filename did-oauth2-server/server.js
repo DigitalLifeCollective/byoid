@@ -20,8 +20,8 @@ const model = {
   },
 
   // Or, using generators.
-  getClient: function*() {
-    yield somethingAsync();
+  getClient: function(clientId, clientSecret, callback) {
+    callback(null, "2YotnFZFEjr1zCsicMWpAA");
     return 'works!';
   },
 
