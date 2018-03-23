@@ -8,29 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
  
 app.use(bodyParser.json());
 
-const model = {
-  // We support returning promises.
-  getAccessToken: function() {
-    return new Promise('works!');
-  },
-
-  // Or, calling a Node-style callback.
-  getAuthorizationCode: function(done) {
-    done(null, 'works!');
-  },
-
-  // Or, using generators.
-  getClient: function(clientId, clientSecret, callback) {
-    callback(null, "2YotnFZFEjr1zCsicMWpAA");
-    return 'works!';
-  },
-
-  // Or, async/wait (using Babel).
-  getUser: async function() {
-    await somethingAsync();
-    return 'works!';
-  }
-};
+const model = require('./model.js');
 
 app.oauth = oauthserver({
   model, // See below for specification 
